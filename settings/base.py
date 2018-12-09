@@ -13,9 +13,11 @@ import django_heroku
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+ROOT_PATH = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
 
-
+print("base dir",BASE_DIR)
+print("root path",ROOT_PATH)
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
@@ -38,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'fitbit_api',
+    'app.fitbit_api',
 ]
 
 MIDDLEWARE = [
