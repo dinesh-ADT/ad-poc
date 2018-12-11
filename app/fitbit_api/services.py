@@ -9,3 +9,8 @@ def dummy_api(url):
 	data = res.json() 
 	print(data)
 	return data
+
+def profile_data_api(access_token,fitbit_id,url):
+	headers = {'Authorization': f'Bearer {access_token}'}
+	r = requests.get(url, headers=headers)
+	return r.json()
