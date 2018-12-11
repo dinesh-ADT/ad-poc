@@ -16,6 +16,6 @@ def profile_data(request,user):
 	access_token = user_data[user]['access_token']
 	fitbit_id = user_data[user]['fitbit_id']
 	url = f'https://api.fitbit.com/1/user/{fitbit_id}/profile.json'
-	data = services.profile_data_api(access_token,fitbit_id,url)
+	data = services.profile_data_api(url, access_token)
 	return HttpResponse(json.dumps(data))
 
