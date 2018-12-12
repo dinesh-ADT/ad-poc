@@ -1,4 +1,5 @@
 import requests
+from .secret import *
 
 def dummy_api(url):
   
@@ -13,4 +14,10 @@ def dummy_api(url):
 def profile_data_api(url, access_token):
 	headers = {'Authorization': f'Bearer {access_token}'}
 	r = requests.get(url, headers=headers)
-	return r.json()
+	return r
+
+def get_fresh_access_token(url,refresh_token):
+	payload = {'grant_type': 'refresh_token', 'refresh_token': refresh_token}
+	headers = {'Authorization' : f'Basic {client_secret_base64}', 'Content-Type' : 'application/x-www-form-urlencoded'}
+	r = requests.post(url,headers=headers, data=payload)
+	return r
