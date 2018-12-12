@@ -13,6 +13,7 @@ def index(request):
 
 def profile_data(request,user):
 	
+	print("++++++++++++++++++++++++here+++++++++++++++++++++++++++")
 	member = Member.objects.get(name=user)
 	user_token = UserToken.objects.get(member=member)
 	access_token = user_token.access_token
