@@ -25,7 +25,7 @@ SECRET_KEY = 'i#i#8#iv*s%t97qv58iz&+9o&+13((op6sb%e(s#($qao!zmml'
 DEBUG = False
 
 # ALLOWED_HOSTS = ['your_production_domain_or_ip', 'your_local_domain']
-ALLOWED_HOSTS = [139.59.62.163]
+ALLOWED_HOSTS = ['139.59.62.163']
 
 
 # Application definition
