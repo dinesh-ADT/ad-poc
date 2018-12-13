@@ -77,11 +77,11 @@ WSGI_APPLICATION = 'app.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'ad_poc_test',
-        'USER': 'ad_poc',
-        'PASSWORD': '#altraalgo0008',
-        'HOST': 'db4free.net',
-        'PORT': '3306',
+        'NAME': 'd1qju7cr6jeof',
+        'USER': 'xzhhwnojlwqwgx',
+        'PASSWORD': '9e1af2ca17b0ac86700767b02cf3862dc3379a805a5de678ca5849820ebd97b9',
+        'HOST': 'ec2-54-83-23-121.compute-1.amazonaws.com',
+        'PORT': '5432',
     }
 }
 
