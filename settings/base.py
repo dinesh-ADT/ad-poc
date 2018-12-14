@@ -9,11 +9,11 @@ https://docs.djangoproject.com/en/2.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.1/ref/settings/
 """
-import django_heroku
+# import django_heroku
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ROOT_PATH = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
@@ -25,7 +25,9 @@ SECRET_KEY = 'i#i#8#iv*s%t97qv58iz&+9o&+13((op6sb%e(s#($qao!zmml'
 DEBUG = True
 
 # ALLOWED_HOSTS = ['your_production_domain_or_ip', 'your_local_domain']
-ALLOWED_HOSTS = ['*']
+
+ALLOWED_HOSTS = ['139.59.62.163','locahost','127.0.0.1']
+
 
 
 # Application definition
@@ -76,12 +78,12 @@ WSGI_APPLICATION = 'app.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'ad_poc_test',
-        'USER': 'ad_poc',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'ad_db',
+        'USER': 'db_admin',
         'PASSWORD': '#altraalgo0008',
-        'HOST': 'db4free.net',
-        'PORT': '3306',
+        'HOST': '139.59.62.163',
+        'PORT': '5432',
     }
 }
 
@@ -123,5 +125,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR,'static/')
 # Activate Django-Heroku.
-django_heroku.settings(locals())
+# django_heroku.settings(locals())
