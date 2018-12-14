@@ -25,7 +25,7 @@ SECRET_KEY = 'i#i#8#iv*s%t97qv58iz&+9o&+13((op6sb%e(s#($qao!zmml'
 DEBUG = False
 
 # ALLOWED_HOSTS = ['your_production_domain_or_ip', 'your_local_domain']
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['139.59.62.163','locahost','127.0.0.1']
 
 
 # Application definition
@@ -80,8 +80,8 @@ DATABASES = {
         'NAME': 'ad_db',
         'USER': 'db_admin',
         'PASSWORD': '#altraalgo0008',
-        'HOST': 'localhost',
-        'PORT': '',
+        'HOST': '139.59.62.163',
+        'PORT': '5432',
     }
 }
 
